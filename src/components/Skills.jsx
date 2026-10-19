@@ -1,55 +1,3 @@
-// function Skills() {
-//   return (
-//     <section id="skills" className="py-20 px-6">
-//       <div className="max-w-5xl mx-auto">
-//         <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
-//           Technical Skills
-//         </h2>
-
-//         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-//           <div className="bg-slate-900 border border-slate-700 p-6 rounded-xl text-center hover:border-blue-400 hover:-translate-y-1 transition duration-300">
-//             <h3 className="text-xl font-semibold">JavaScript</h3>
-//           </div>
-
-//           <div className="bg-slate-900 border border-slate-700 p-6 rounded-xl text-center hover:border-blue-400 hover:-translate-y-1 transition duration-300">
-//             <h3 className="text-xl font-semibold">React.js</h3>
-//           </div>
-
-//           <div className="bg-slate-900 border border-slate-700 p-6 rounded-xl text-center hover:border-blue-400 hover:-translate-y-1 transition duration-300">
-//             <h3 className="text-xl font-semibold">Node.js</h3>
-//           </div>
-
-//           <div className="bg-slate-900 border border-slate-700 p-6 rounded-xl text-center hover:border-blue-400 hover:-translate-y-1 transition duration-300">
-//             <h3 className="text-xl font-semibold">Express.js</h3>
-//           </div>
-
-//           <div className="bg-slate-900 border border-slate-700 p-6 rounded-xl text-center hover:border-blue-400 hover:-translate-y-1 transition duration-300">
-//             <h3 className="text-xl font-semibold">MongoDB</h3>
-//           </div>
-
-//           <div className="bg-slate-900 border border-slate-700 p-6 rounded-xl text-center hover:border-blue-400 hover:-translate-y-1 transition duration-300">
-//             <h3 className="text-xl font-semibold">SQL</h3>
-//           </div>
-
-//           <div className="bg-slate-900 border border-slate-700 p-6 rounded-xl text-center hover:border-blue-400 hover:-translate-y-1 transition duration-300">
-//             <h3 className="text-xl font-semibold">HTML</h3>
-//           </div>
-
-//           <div className="bg-slate-900 border border-slate-700 p-6 rounded-xl text-center hover:border-blue-400 hover:-translate-y-1 transition duration-300">
-//             <h3 className="text-xl font-semibold">CSS</h3>
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// }
-
-// export default Skills;
-
-
-
-
-
 function Skills() {
   const skillCategories = [
     {
@@ -68,6 +16,16 @@ function Skills() {
       title: "Programming & Tools",
       skills: ["C++", "Git", "GitHub"],
     },
+    {
+      title: "Soft Skills",
+      skills: [
+        "Communication",
+        "Teamwork",
+        "Problem-solving",
+        "Time Management",
+        "Adaptability",
+      ],
+    },
   ];
 
   return (
@@ -82,16 +40,16 @@ function Skills() {
           </p>
 
           <h2 className="text-3xl font-bold md:text-4xl">
-            Technical <span className="text-blue-400">Skills</span>
+            My <span className="text-blue-400">Skills</span>
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl leading-7 text-gray-400">
-            Technologies and tools I use to build responsive,
-            user-friendly, and full-stack web applications.
+            Technical skills and personal strengths that help me
+            build responsive, user-friendly, and full-stack web applications.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {skillCategories.map((category) => (
             <div
               key={category.title}

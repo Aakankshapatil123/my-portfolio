@@ -51,26 +51,37 @@ function Navbar() {
           >
             Home
           </a>
-
           <a
             href="#about"
             className="text-gray-300 hover:text-blue-400 transition duration-300"
           >
             About
           </a>
-
           <a
             href="#skills"
             className="text-gray-300 hover:text-blue-400 transition duration-300"
           >
             Skills
           </a>
-
           <a
             href="#projects"
             className="text-gray-300 hover:text-blue-400 transition duration-300"
           >
             Projects
+          </a>
+          <a
+            href="#certifications"
+            onClick={() => setIsOpen(false)}
+            className="text-gray-300 hover:text-blue-400 transition"
+          >
+            Certifications
+          </a>
+
+          <a
+            href="#contact"
+            className="text-gray-300 hover:text-blue-400 transition duration-300"
+          >
+            Contact
           </a>
 
           <a
@@ -102,7 +113,6 @@ function Navbar() {
           >
             Home
           </a>
-
           <a
             href="#about"
             onClick={() => setIsOpen(false)}
@@ -110,7 +120,6 @@ function Navbar() {
           >
             About
           </a>
-
           <a
             href="#skills"
             onClick={() => setIsOpen(false)}
@@ -118,13 +127,28 @@ function Navbar() {
           >
             Skills
           </a>
-
           <a
             href="#projects"
             onClick={() => setIsOpen(false)}
             className="text-gray-300 hover:text-blue-400 transition"
           >
             Projects
+          </a>
+
+          <a
+            href="#certifications"
+            onClick={() => setIsOpen(false)}
+            className="text-gray-300 hover:text-blue-400 transition"
+          >
+            Certifications
+          </a>
+
+          <a
+            href="#certifications"
+            onClick={() => setIsOpen(false)}
+            className="text-gray-300 hover:text-blue-400 transition"
+          >
+            Certifications
           </a>
 
           <a
