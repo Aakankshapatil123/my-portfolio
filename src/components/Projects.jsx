@@ -41,10 +41,10 @@ function Projects() {
         "Tailwind CSS",
         "JWT",
       ],
-      link: "/project/Jobify",
+      link: "/project/jobify",
       liveUrl: "https://fe-fsdcwee4142-jobify.netlify.app/",
       frontendGithub:
-        "https://github.com/Aakankshapatil123/fe-fsdcwee4142-jobify",
+        "https://github.com/Aakankshapatil123/fe-fsdcwee4142-jobify.git",
       backendGithub:
         "https://github.com/Aakankshapatil123/be-fsdcweeb4142-jobify",
       number: "02",
@@ -66,8 +66,10 @@ function Projects() {
       ],
       link: "/project/notes-app",
       liveUrl: "https://notespace-aakanksha.netlify.app/",
-      frontendGithub: "https://github.com/Aakankshapatil123/re-fsdcweeb4142",
-      backendGithub: "https://github.com/Aakankshapatil123/be-fsdcweeb4142",
+      frontendGithub:
+        "https://github.com/Aakankshapatil123/re-fsdcweeb4142",
+      backendGithub:
+        "https://github.com/Aakankshapatil123/be-fsdcweeb4142",
       number: "03",
     },
     {
@@ -81,7 +83,8 @@ function Projects() {
       technologies: ["React.js", "Tailwind CSS", "jsPDF"],
       link: "/project/invoice-builder",
       liveUrl: "https://invoicebuil.netlify.app/",
-      githubUrl: "https://github.com/Aakankshapatil123/invoice-generator",
+      githubUrl:
+        "https://github.com/Aakankshapatil123/invoice-generator",
       number: "04",
     },
     {
@@ -92,69 +95,98 @@ function Projects() {
         "Developed a responsive task management application with task creation, editing, deletion, and drag-and-drop functionality.",
       details:
         "Used Context API for state management and localStorage to persist tasks between browser sessions.",
-      technologies: ["React.js", "Tailwind CSS", "Context API", "localStorage"],
+      technologies: [
+        "React.js",
+        "Tailwind CSS",
+        "Context API",
+        "localStorage",
+      ],
       link: "/project/kanban",
       liveUrl: "https://kanbanboardp.netlify.app/",
-      githubUrl: "https://github.com/Aakankshapatil123/kanban-board",
+      githubUrl:
+        "https://github.com/Aakankshapatil123/kanban-board",
       number: "05",
     },
   ];
 
   const buttonClass =
-    "inline-flex items-center justify-center rounded-lg border border-slate-700 px-4 py-2.5 text-sm font-semibold text-gray-200 transition hover:border-blue-400 hover:bg-blue-500/10 hover:text-blue-300";
+    "inline-flex items-center justify-center rounded-xl border border-slate-700 bg-slate-900/70 px-4 py-3 text-sm font-semibold text-slate-200 transition duration-300 hover:-translate-y-0.5 hover:border-blue-400 hover:bg-blue-500/10 hover:text-blue-300";
 
   const liveButtonClass =
-    "inline-flex items-center justify-center rounded-lg bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-blue-600";
+    "inline-flex items-center justify-center rounded-xl bg-blue-500 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition duration-300 hover:-translate-y-0.5 hover:bg-blue-400 hover:shadow-blue-500/30";
 
   return (
-    <section id="projects" className="bg-slate-900 px-6 py-20 md:py-24">
-      <div className="mx-auto max-w-6xl">
+    <section
+      id="projects"
+      className="relative overflow-hidden border-y border-slate-800 bg-slate-900 px-6 py-20 md:py-28"
+    >
+      {/* Background glow effects */}
+      <div className="pointer-events-none absolute -left-32 top-20 h-72 w-72 rounded-full bg-blue-500/10 blur-3xl" />
+
+      <div className="pointer-events-none absolute -right-32 bottom-10 h-72 w-72 rounded-full bg-cyan-500/10 blur-3xl" />
+
+      <div className="relative mx-auto max-w-6xl">
+        {/* Section heading */}
         <div className="mb-14 text-center">
-          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.2em] text-blue-400">
+          <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-blue-400">
             What I've built
           </p>
 
-          <h2 className="text-3xl font-bold md:text-4xl">
-            Featured <span className="text-blue-400">Projects</span>
+          <h2 className="text-3xl font-extrabold text-white md:text-5xl">
+            Featured{" "}
+            <span className="bg-gradient-to-r from-blue-400 to-cyan-300 bg-clip-text text-transparent">
+              Projects
+            </span>
           </h2>
 
-          <p className="mx-auto mt-4 max-w-2xl leading-7 text-gray-400">
-            Explore my full-stack and frontend projects, the technologies I
-            used, and links to their live demos and source code.
+          <div className="mx-auto mt-5 h-1 w-20 rounded-full bg-gradient-to-r from-blue-500 to-cyan-300" />
+
+          <p className="mx-auto mt-6 max-w-2xl text-base leading-8 text-slate-400 md:text-lg">
+            Explore my full-stack and frontend applications, the technologies
+            I used, and links to live demos and source code.
           </p>
         </div>
 
+        {/* Project cards */}
         <div className="grid grid-cols-1 gap-7 md:grid-cols-2">
           {projects.map((project) => (
             <article
               key={project.number}
-              className="group flex flex-col rounded-2xl border border-slate-700 bg-slate-950/70 p-6 transition-all duration-300 hover:-translate-y-1 hover:border-blue-400 hover:shadow-xl hover:shadow-blue-500/10 md:p-8"
+              className="group relative flex flex-col overflow-hidden rounded-2xl border border-slate-800 bg-slate-950/80 p-6 shadow-lg shadow-black/10 transition-all duration-300 hover:-translate-y-2 hover:border-blue-400/60 hover:shadow-2xl hover:shadow-blue-500/10 md:p-8"
             >
+              {/* Gradient top border */}
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500 via-cyan-300 to-indigo-500 opacity-60 transition-opacity group-hover:opacity-100" />
+
+              {/* Project number and category */}
               <div className="mb-6 flex items-center justify-between gap-3">
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-blue-400/30 bg-blue-500/10 text-lg font-bold text-blue-400">
+                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl border border-blue-400/30 bg-blue-500/10 text-lg font-extrabold text-blue-400 transition-transform duration-300 group-hover:scale-110">
                   {project.number}
                 </span>
 
-                <span className="rounded-full border border-slate-700 px-3 py-1 text-xs font-medium text-gray-400">
+                <span className="rounded-full border border-slate-700 bg-slate-900 px-3 py-1.5 text-center text-xs font-medium text-slate-400">
                   {project.category}
                 </span>
               </div>
 
-              <h3 className="text-2xl font-bold transition-colors group-hover:text-blue-400">
+              {/* Project information */}
+              <h3 className="text-2xl font-bold text-white transition-colors group-hover:text-blue-300 md:text-3xl">
                 {project.title}
               </h3>
 
-              <p className="mb-5 mt-2 text-sm font-medium text-blue-300">
+              <p className="mb-5 mt-2 text-sm font-semibold text-cyan-300">
                 {project.subtitle}
               </p>
 
-              <p className="mb-4 leading-7 text-gray-300">
+              <p className="mb-4 text-sm leading-7 text-slate-300 md:text-base">
                 {project.description}
               </p>
 
-              <p className="mb-6 leading-7 text-gray-400">{project.details}</p>
+              <p className="mb-6 text-sm leading-7 text-slate-400">
+                {project.details}
+              </p>
 
-              <h4 className="mb-3 text-sm font-semibold uppercase tracking-wider text-gray-300">
+              {/* Technology badges */}
+              <h4 className="mb-3 text-xs font-bold uppercase tracking-[0.15em] text-slate-300">
                 Technologies Used
               </h4>
 
@@ -162,16 +194,17 @@ function Projects() {
                 {project.technologies.map((technology) => (
                   <span
                     key={technology}
-                    className="rounded-md border border-slate-700 bg-slate-800 px-3 py-1.5 text-xs font-medium text-gray-300"
+                    className="rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs font-medium text-slate-300 transition duration-200 hover:border-blue-400/50 hover:bg-blue-500/10 hover:text-blue-300"
                   >
                     {technology}
                   </span>
                 ))}
               </div>
 
+              {/* Project links */}
               <div className="mt-auto border-t border-slate-800 pt-5">
-                <h4 className="mb-4 text-sm font-semibold text-gray-300">
-                  Project Links
+                <h4 className="mb-4 text-sm font-semibold text-slate-300">
+                  Explore Project
                 </h4>
 
                 <div className="flex flex-wrap gap-3">
@@ -191,7 +224,7 @@ function Projects() {
                       rel="noopener noreferrer"
                       className={buttonClass}
                     >
-                      Frontend GitHub ↗
+                      Frontend Code ↗
                     </a>
                   )}
 
@@ -202,7 +235,7 @@ function Projects() {
                       rel="noopener noreferrer"
                       className={buttonClass}
                     >
-                      Backend GitHub ↗
+                      Backend Code ↗
                     </a>
                   )}
 
@@ -231,3 +264,4 @@ function Projects() {
 }
 
 export default Projects;
+
